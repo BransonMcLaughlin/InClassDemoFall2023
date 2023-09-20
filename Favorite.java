@@ -9,7 +9,7 @@ public class Favorite {
     private URL url;
     
 
-    public Favorite(String name, String address){
+    public Favorite(String name, String address) throws MalformedURLException {
         this.videoName = name;
         this.date = new Date();
         this.url = new URL(address);
@@ -17,7 +17,7 @@ public class Favorite {
     }
 
     public String toString(){
-        String s = this.videName + " " + this.date + "\n";
+        String s = this.videoName + " " + this.date + "\n";
         return s + url.toString();
     }
 }
