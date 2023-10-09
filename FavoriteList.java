@@ -12,27 +12,23 @@ public class FavoriteList extends ListADT<Favorite>{
     
     @Override
     public int size() {
-        // TODO Auto-generated method stub
         return this.numFavorites;
     }
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
         return (this.numFavorites ==0);
         // returns true or false without if statement
     }
 
     @Override
     public void removeAll() {
-        // TODO Auto-generated method stub
          this.numFavorites = 0;
         this.favorites = new Favorite[MAX_FAVORITES];
     }
 
     @Override
     public void add(int index, Favorite newFave) throws ListException {
-        // TODO Auto-generated method stub
         if(index < 0 || index > this.size())
             throw new ListException("Index " + index + " is invalid fo a list of size: " + this.size());
 
@@ -48,7 +44,6 @@ public class FavoriteList extends ListADT<Favorite>{
 
     @Override
     public Favorite get(int index) throws ListException {
-        // TODO Auto-generated method stub
         if (index < 0 || index >= this.size() )
             throw new ListException("Index " + index + " is invalid fo a list of size: " + this.size());
 
@@ -57,7 +52,6 @@ public class FavoriteList extends ListADT<Favorite>{
 
     @Override
     public void remove(int index) throws ListException {
-        // TODO Auto-generated method stub
         if (index < 0 || index >= this.size() )
             throw new ListException("Index " + index + " is invalid fo a list of size: " + this.size());
 
